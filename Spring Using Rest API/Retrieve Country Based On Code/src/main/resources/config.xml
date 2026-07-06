@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="in" class="com.cognizant.helloworld.model.Country">
+        <constructor-arg value="IN"/>
+        <constructor-arg value="India"/>
+    </bean>
+
+    <bean id="fr" class="com.cognizant.helloworld.model.Country">
+        <constructor-arg value="FR"/>
+        <constructor-arg value="France"/>
+    </bean>
+
+    <bean id="jp" class="com.cognizant.helloworld.model.Country">
+        <constructor-arg value="JP"/>
+        <constructor-arg value="Japan"/>
+    </bean>
+
+    <bean id="us" class="com.cognizant.helloworld.model.Country">
+        <constructor-arg value="US"/>
+        <constructor-arg value="United States"/>
+    </bean>
+
+    <bean id="uk" class="com.cognizant.helloworld.model.Country">
+        <constructor-arg value="UK"/>
+        <constructor-arg value="United Kingdom"/>
+    </bean>
+
+    <util:list id="countryList" value-type="com.cognizant.helloworld.model.Country">
+        <ref bean="in"/>
+        <ref bean="fr"/>
+        <ref bean="jp"/>
+        <ref bean="us"/>
+        <ref bean="uk"/>
+    </util:list>
+
+</beans>
